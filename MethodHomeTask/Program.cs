@@ -14,6 +14,7 @@ namespace MethodHomeTask
             PlusMinus(numbers);
             Console.WriteLine(RemoveSpace("    Kamran   Baxsaliyev"));
             Console.WriteLine(Palindrome("salam"));
+            Console.WriteLine(Character("Kamran"));
 
         }
         #region task1
@@ -67,8 +68,28 @@ namespace MethodHomeTask
             }
 
         }
-#endregion  
+        #endregion
 
+
+        #region Task8
+        static string Character(string input)
+        {
+            string result = string.Empty;
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (i ==4)
+                {
+                    break;
+                }
+                else
+                {
+                    result += input[i];
+                }
+              
+            }return result;
+            
+        } 
+            #endregion
 
     }
 }
