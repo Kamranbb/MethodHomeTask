@@ -15,6 +15,7 @@ namespace MethodHomeTask
             Console.WriteLine(RemoveSpace("    Kamran   Baxsaliyev"));
             Console.WriteLine(Palindrome("salam"));
             Console.WriteLine(Character("Kamran"));
+            Console.WriteLine(RemoveChar("ssllmm"));
 
         }
         #region task1
@@ -88,8 +89,37 @@ namespace MethodHomeTask
               
             }return result;
             
-        } 
-            #endregion
+        }
+        #endregion
+
+
+        #region 
+        static string RemoveChar(string input)
+        {
+            string result = string.Empty;
+            for (int i = 0; i < input.Length; i++)
+            {
+                bool repeated = false;
+                for (int j = 0; j < result.Length; j++)
+                {
+                    if (input[i] == result[j])
+                    {
+                        repeated = true;
+                        break;
+                    }
+                }
+                if (!repeated)
+                {
+                    result+=input[i];
+                }
+            }
+            return result;
+        }
+
+
+
+
+        #endregion
 
     }
 }
