@@ -93,7 +93,7 @@ namespace MethodHomeTask
         #endregion
 
 
-        #region 
+        #region task4
         static string RemoveChar(string input)
         {
             string result = string.Empty;
