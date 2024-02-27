@@ -1,6 +1,8 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.NetworkInformation;
 using System.Runtime.ExceptionServices;
+using System.Text;
 using System.Text.Json.Serialization.Metadata;
 
 namespace MethodHomeTask
@@ -16,6 +18,9 @@ namespace MethodHomeTask
             Console.WriteLine(Palindrome("salam"));
             Console.WriteLine(Character("Kamran"));
             Console.WriteLine(RemoveChar("ssllmm"));
+            string input = "      salammm     necesen ";
+            RemoveSpaceWord(input.Split());
+
 
         }
         #region task1
@@ -121,5 +126,19 @@ namespace MethodHomeTask
 
         #endregion
 
+        #region task6
+       static  void  RemoveSpaceWord (params string[]   input)
+        {   string result = string.Empty;
+            
+            for (int i = 0; i < input.Length; i++)
+            {
+                result += input[i];
+            }
+
+            Console.WriteLine(result.ToString());
+        }
+
+
+        #endregion
     }
 }
